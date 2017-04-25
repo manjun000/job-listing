@@ -27,6 +27,7 @@
             <td>薪资上限</td>
             <td>城市</td>
             <td>招聘公司</td>
+            <td>联系电话</td>
             <td>刊登时间</td>
           </tr>
         </thead>
@@ -38,7 +39,8 @@
               <td><%= job.wage_upper_bound %> </td>
               <td><%= job.city %> </td>
               <td><%= job.company %> </td>
-              <td><%= job.created_at.to_formatted_s(:db) %></td>
+              <td><%= job.contact_email %> </td>
+              <td><%= job.created_at.strftime("%Y-%m-%d") %></td>
             </tr>
           <% end %>
         </tbody>

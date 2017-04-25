@@ -1,8 +1,14 @@
-<h1> <%= @job.title %></h1>
-
-<p>
-  <%= simple_format(@job.description) %>
-</p>
-<div class="text-center">
-  <%= link_to("投递简历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1><%= @job.title %><span class="company">  / <%= @job.company %></span></h1>
+    <p>
+      <span class="wage"><%= @job.wage_lower_bound %> k ~ <%= @job.wage_upper_bound %> k </span> /
+      <span><sapn class="fa fa-map-marker"></sapn> <%= @job.city %></span> /
+      <%= link_to("投递简历", new_job_resume_path(@job), class: "btn btn-lg btn-info pull-right") %>
+        <!-- <span><span class="<%#= render_job_category(@job) %>"> <%= @job.category %></span> -->
+     </p>
+     <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">发布于职赢网</span></p>
+      <br />
+      <p>职位描述：<%= simple_format(@job.description) %></p>
+  </div>
 </div>
