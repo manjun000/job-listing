@@ -12,7 +12,7 @@ puts '这个种子档会自动建立一个账号, 并且随机创建 10 个公�
 create_account = User.create([email: 'admin@gmail.com', password: '111111', password_confirmation: '111111', is_admin: 'true'])
 puts 'Admin account is created successfully!'
 
-job_info = [
+job_info1 = [
   '招聘技术总监',
   '招聘项目管理',
   '招聘特效设计师',
@@ -26,11 +26,13 @@ job_info = [
   '招聘游戏场景设计',
   '招聘需求分析师'
 ]
+job_info2 = ['广州', '上海', '苏州', '深圳']
+job_info3 = ['暴雪', '任天堂', 'uzi', 'Infinity Ward']
 create_jobs = for i in 1..10 do
-                Job.create!([title: job_info[rand(job_info.length)], description: "这是一个公开的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
+                Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], description: "这是一个公开的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
               end
 for i in 1..10 do
-  Job.create!([title: job_info[rand(job_info.length)], description: "这是一个隐藏的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
+  Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], description: "这是一个隐藏的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
 end
 
 puts '10 Public jobs created.'
