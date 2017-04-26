@@ -26,8 +26,8 @@ job_info1 = [
   '游戏场景设计',
   '需求分析师'
 ]
-job_info2 = ['广州', '上海', '苏州', '深圳']
-job_info3 = ['暴雪', '任天堂', 'uzi', 'Infinity Ward']
+job_info2 = '广州, 上海, 苏州, 深圳'.split(',')
+job_info3 = '暴雪, 任天堂, uzi, Infinity Ward'.split(',')
 create_jobs = for i in 1..30 do
                 Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], contact_email:" text@gmail.com", description: "这是一个公开的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
               end
