@@ -15,4 +15,6 @@ class Job < ApplicationRecord
   end
 
   has_many :resumes
+
+  belongs_to :category
 end

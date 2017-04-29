@@ -1,9 +1,14 @@
 <div class="col-md-10 col-centered">
+
+
+
   <div class="panel panel-info">
 
     <div class="panel-heading">
       <h3>
         招聘信息
+
+        <!--排序-->
         <div class="dropdown clearfix pull-right">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             排序
@@ -16,6 +21,17 @@
           </ul>
         </div>
       </h3>
+    </div>
+
+    <!--分类-->
+    <div class="tab">
+      <ul class="nav nav-tabs">
+        <li><%=link_to("所有工作", jobs_path)%></li>
+        <li><%=link_to("前端", jobs_path(:category => "前端"))%></li>
+        <li><%=link_to("后端", jobs_path(:category => "后端"))%></li>
+        <li><%=link_to("美工", jobs_path(:category => "游戏美工"))%></li>
+        <li><%=link_to("其他", jobs_path(:category => "其他"))%></li>
+      </ul>
     </div>
 
     <div class="panel-body">

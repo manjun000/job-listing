@@ -11,14 +11,23 @@ class JobsController < ApplicationController
   end
 
    def index
-     @jobs = case params[:order]
-     when 'by_lower_bound'
-       Job.published.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 8)
-     when 'by_upper_bound'
-       Job.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 8)
-     else
-       Job.published.recent.paginate(:page => params[:page], :per_page => 8)
+     #不分类
+     @jobs = Job.published
+     #分类
+     if params[:category].present?
+       @category_id = Category.find_by(name: params[:category]).id
+       @jobs = @jobs.where(:category_id => @category_id)
      end
+     #排序
+     @jobs = case params[:order]
+             when 'by_lower_bound'
+               @jobs.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 8)
+             when 'by_upper_bound'
+               @jobs.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 8)
+             else
+               @jobs.recent.paginate(:page => params[:page], :per_page => 8)
+              end
+
    end
 
    def new
@@ -75,6 +84,6 @@ protected
 private
 
 def job_params
-  params. require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :category, :company, :city)
+  params. require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden,  :company, :city, :category_id)
 end
 end
