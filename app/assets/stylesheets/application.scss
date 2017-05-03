@@ -20,65 +20,17 @@
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+//说明：这里只存放navbar、footer、搜索栏、弹窗和通用的样式。 其他页面的样式存放在各自的scss中。//
+
 html{height: 100%;}
 body{position: relative; margin: 0px; padding: 0px; min-height: 100%;
    .wrapper { padding-bottom: 70px; }//这是layout里面的
 }
-//footer
-footer{ position: absolute; width: 100%; height: 50px; bottom: 0; margin-right: 0px; background-color: #424242;
-}
-p{margin: 5px auto; color: #BDBDBD}
 
-
-//这是首页大图
-.jumbotron {
-  background-image: url('http://ww2.sinaimg.cn/large/006tNbRwgy1fexj2ep00dj31hc0u0wk1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 110px;
-  margin: -20px -15px 30px;
-  border-radius: 0px;
-
-  .title{
-   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-   text-align: center;
-   margin-top: 200px;
-   margin-bottom: 80px;
-   color: #EEB62B;
-   }
-   .slogan{
-     margin-top: 10px;
-     margin-bottom: 50px;
-     text-align: center;
-     color: #EEB62B;
-     top: 12px;
-   }
-
-   .lead{
-     margin-bottom: 60px;
-     text-align: center;
-     color: white;
-   }
-   .lead .btn-lg{
-     background-color: #EEB62B;
-   }
-}
-//以上是首页大图
-//首页中图和文字
-#lp-mid {
-  width: 100%; margin: 0 auto;
-  .pic-1{  }
-  .text-1{  padding-top: 8%;}
-  .pic-2{   margin-top: 20px;}
-  .text-2{  margin-top: 20px; padding-top: 8%;padding-left: 7%;}
-}
-
-
-
-//这是导航栏
+//navbar start
 .navbar-default {
-  background-color: #424242;
-  border-color: #757575;
+  background-color: #0d1802;
+  border-color: #0d1802;
 }
 
 @media (min-width: 780px){
@@ -86,7 +38,7 @@ p{margin: 5px auto; color: #BDBDBD}
 }
 
 .navbar-default .navbar-brand {
-  color:#EEB62B;
+  color:#e1e35e;
   padding: 10px 15px;
   line-height: 30px;
 }
@@ -98,17 +50,16 @@ p{margin: 5px auto; color: #BDBDBD}
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav > li > a{
-  color: #EEB62B;
-}
+.navbar-default .navbar-nav > li > a{color: #e1e35e;}
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #F49644;
   background-color: transparent;
 }
+//navbar end
 
-//搜索栏
+//搜索栏 start
 .form-group{ margin:10px 50px 10px auto;}
 
 .input-group {
@@ -117,8 +68,19 @@ p{margin: 5px auto; color: #BDBDBD}
   border-collapse: separate;
   width: 250px; //加上width
 }
-//以上是导航栏
-/****** LOGIN MODAL ******/
+//搜索栏 end
+
+
+//footer start
+footer{ position: absolute; width: 100%; height: 50px; bottom: 0; margin-right: -15px; background-color: #0d1802;
+  p{margin-bottom: auto; color: #e1e35e}
+  a{color: #e1e35e}
+  img {display: inline-block;  width: 32px; height: 32px;}
+}
+//footer end
+
+
+/******弹窗 LOGIN MODAL start ******/
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -212,7 +174,9 @@ p{margin: 5px auto; color: #BDBDBD}
 .login-help{
   font-size: 12px;
 }
-//------commont----
+/******弹窗 LOGIN MODAL end ******/
+
+//------commont----//
 .col-centered{
   float: none;
   margin: 0 auto;

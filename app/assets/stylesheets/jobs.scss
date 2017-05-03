@@ -2,19 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pro-table{
-  border: 1px solid #ccc;
+// .jobs-wrapper{
+//   background-image: url(http://ww2.sinaimg.cn/large/006tNbRwgy1ff7c5gcskpj31he0u30zf.jpg);
+//
+// }
 
-  padding: 5px;
-  margin: 5% 0;
-  box-shadow: 3px 3px 2px #ccc;
 
-  transition: 0.5s;
-}
+//标题
+.jobs-wrapper{
+  .panel-heading{
+    text-align: center;
+    background-color: #B8D28C;
 
-.pro-table:hover{
-  box-shadow: 3px 3px 0px transparent;
-  transition: 0.5s;
+    button:hover{background-color:#FFEE58;}//排序按钮
+    ul{li:hover{background-color:#FFEE58;}}//排序下拉连接
+
+  }
+
+  .pro-table{
+    border: 1px solid #ccc;
+
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+
+    transition: 0.5s;
+  }
+
+  .pro-table:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+  }
+
 }
 
 //search页面
@@ -23,3 +42,5 @@
   margin-bottom: 4px;
   p{color: inherit;}
 }
+
+//背景图

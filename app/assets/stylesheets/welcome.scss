@@ -1,3 +1,109 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*background-video*/
+// .lp-video{
+//   width: 1920;
+//   height: auto;
+//   z-index: -100;
+//   margin-top: -20px;
+//   margin-bottom: 40px;
+//   background-size: cover;
+//
+//   video{width: 100%; height: auto;}
+
+//大图 start
+.lp-top {
+   background-image: url("http://ww2.sinaimg.cn/large/006tNbRwgy1ff7xy0u17wj30uq0j7b29.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-bottom: 50px;
+   margin-top: -20px;
+
+   .lp-top-inner {
+       background-color: rgba(176, 179, 144, 0.69);
+       padding-bottom: 5px;
+       margin-top: 550px;
+       margin-bottom: 10px;
+   }
+
+   .title {
+       text-align: center;
+       color: #e1e35e;
+   }
+
+   .slogan {
+       color: #e1e35e;
+       margin-top: 10px;
+      //  margin-bottom: 50px;
+       text-align: center;
+       font-size: 25px;
+       top: 12px;
+   }
+
+   .lead {
+      //  margin-bottom: 60px;
+       text-align: center;
+       color: #e1e35e;
+   }
+
+   .btn-danger {
+        color: #0c0c0c;
+        background-color: #90a824;
+        border-color: #120f0c;
+        font-size: 20px;
+   }
+
+    .btn-danger:hover {
+        background-color: #FFEE58;
+        color: #0c0c0c;
+        }
+}
+//大图 end
+
+//中间部分 start
+/* Center align the text within the three columns below the carousel */
+.lp-mid .col-lg-5 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.lp-mid h3 {
+  font-weight: normal;
+  margin-top: 70px;
+}
+.lp-mid .col-lg-7 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.lp-mid-divider {
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.lp-mid-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+//中间部分 end
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .lp-mid-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .lp-mid-heading {
+    margin-top: 120px;
+  }
+}
