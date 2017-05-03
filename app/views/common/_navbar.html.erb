@@ -12,16 +12,16 @@
          <ul class="nav navbar-nav navbar-left">
             <li><%= link_to("首页", root_path, class: "scroll") %></li>
              <li><%= link_to("工作", jobs_path, class: "scroll") %></li>
+             <!--search_bar-->
+             <li>
+               <div class="form-group form-inline search-bar">
+                 <%= render :partial => "jobs/search_bar" %>
+               </div>
+             </li>
          </ul>
-          <ul class="nav navbar-nav navbar-right">
 
-            <!--search_bar-->
-            <li>
-              <div class="form-group form-inline search-bar">
-                <%= render :partial => "jobs/search_bar" %>
-              </div>
-            </li>
-            <!--账号操作-->
+        <!--账号操作-->
+          <ul class="nav navbar-nav navbar-right">
             <% if !current_user %>
               <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a> </li>
               <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
@@ -39,7 +39,7 @@
                    </ul>
                 </li>
              <% end %>
-            </ul>
+          </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>

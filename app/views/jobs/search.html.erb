@@ -2,8 +2,8 @@
   <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <br>
     <div class="pull-right">
-      <%= link_to(content_tag(:i, " 查看所有工作", class: "fa fa-reply-all"), jobs_path) %> |
-      <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(:back)) %>
+      <%= link_to("查看所有工作", jobs_path) %> |
+      <%= link_to("返回", url_for(:back)) %>
     </div>
 
     <% if @jobs.blank?%>

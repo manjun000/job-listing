@@ -31,6 +31,7 @@
    .title {
        text-align: center;
        color: #e1e35e;
+       text-shadow: 0 0 3px #0c2e0b;
    }
 
    .slogan {
@@ -39,6 +40,7 @@
       //  margin-bottom: 50px;
        text-align: center;
        font-size: 25px;
+       text-shadow: 0 0 3px #0c2e0b;
        top: 12px;
    }
 
@@ -93,17 +95,17 @@
   letter-spacing: -1px;
 }
 //中间部分 end
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 768px) {
-  .lp-mid-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .lp-mid-heading {
-    margin-top: 120px;
-  }
-}
+// /* RESPONSIVE CSS
+// -------------------------------------------------- */
+//
+// @media (min-width: 768px) {
+//   .lp-mid-heading {
+//     font-size: 50px;
+//   }
+// }
+//
+// @media (min-width: 992px) {
+//   .lp-mid-heading {
+//     margin-top: 120px;
+//   }
+// }

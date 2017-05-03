@@ -25,7 +25,7 @@ class JobsController < ApplicationController
              when 'by_upper_bound'
                @jobs.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 8)
              else
-               @jobs.recent.paginate(:page => params[:page], :per_page => 8)
+               @jobs.recent.paginate(:page => params[:page], :per_page => 10)
               end
 
    end

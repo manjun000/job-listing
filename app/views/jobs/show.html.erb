@@ -7,7 +7,7 @@
       <%= link_to("投递简历", new_job_resume_path(@job), class: "btn btn-lg btn-info pull-right") %>
         <!-- <span><span class="<%#= render_job_category(@job) %>"> <%= @job.category %></span> -->
      </p>
-     <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">发布于职赢网</span></p>
+     <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">发布</span></p>
       <br />
       <p>职位描述：<%= simple_format(@job.description) %></p>
   </div>

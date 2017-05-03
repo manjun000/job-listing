@@ -17,3 +17,13 @@
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require_tree .
+
+/***鼠标移到tr上变色***/
+$(document).ready(function(){
+			$("table tr").mouseover(function(){
+				$(this).css("background","#FFEE58");
+			});
+			$("table tr").mouseout(function(){
+				$(this).css("background","");
+			});
+});
