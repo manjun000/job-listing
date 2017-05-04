@@ -8,7 +8,7 @@
 // }
 
 
-//标题
+//---标题 start---//
 .jobs-wrapper{
   .panel-heading{
     text-align: center;
@@ -29,18 +29,17 @@
     transition: 0.5s;
   }
 
-  // .pro-table:hover{
-  //   box-shadow: 3px 3px 0px transparent;
-  //   transition: 0.5s;
-  // }
-
+  /*.pro-table:hover{
+       box-shadow: 3px 3px 0px transparent;
+      transition: 0.5s;
+    } 鼠标悬停在单元格变色，已经用其他方式实现了 */
 }
+//---标题 end--//
 
-//search页面
+//---search页面 start---//
 .job-show-box{
   border: 1px solid #ddd;
   margin-bottom: 4px;
   p{color: inherit;}
 }
-
-//背景图
+//---search页面 end---//

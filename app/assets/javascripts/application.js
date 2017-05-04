@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
+//= require bootstrap/modal
 //= require_tree .
 
 /***鼠标移到tr上变色***/

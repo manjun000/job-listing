@@ -2,18 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*background-video*/
-// .lp-video{
-//   width: 1920;
-//   height: auto;
-//   z-index: -100;
-//   margin-top: -20px;
-//   margin-bottom: 40px;
-//   background-size: cover;
-//
-//   video{width: 100%; height: auto;}
+/*background-video
+ .lp-video{
+   width: 1920;
+   height: auto;
+   z-index: -100;
+   margin-top: -20px;
+   margin-bottom: 40px;
+   background-size: cover;
+   video{width: 100%; height: auto;}
+   背景视频，现在改用图片 */
 
-//大图 start
+//---大图 start---//
 .lp-top {
    background-image: url("http://ww2.sinaimg.cn/large/006tNbRwgy1ff7xy0u17wj30uq0j7b29.jpg");
    background-repeat: no-repeat;
@@ -62,10 +62,9 @@
         color: #0c0c0c;
         }
 }
-//大图 end
+//---大图 end---//
 
-//中间部分 start
-/* Center align the text within the three columns below the carousel */
+//---中间部分 start---//
 .lp-mid .col-lg-5 {
   margin-bottom: 20px;
   text-align: center;
@@ -81,8 +80,7 @@
 }
 
 
-/* Featurettes
-------------------------- */
+/* Featurettes这部分现在的html不用 */
 
 .lp-mid-divider {
   margin: 40px 0; /* Space out the Bootstrap <hr> more */
@@ -94,7 +92,7 @@
   line-height: 1;
   letter-spacing: -1px;
 }
-//中间部分 end
+//---中间部分 end---//
 // /* RESPONSIVE CSS
 // -------------------------------------------------- */
 //
