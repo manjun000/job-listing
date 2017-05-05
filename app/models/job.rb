@@ -1,10 +1,12 @@
 class Job < ApplicationRecord
   scope :published, -> { where(is_hidden: false)}
   scope :recent, -> { order('created_at DESC')}
+
   validates :title, presence: true
   validates :wage_upper_bound, presence: true
   validates :wage_lower_bound, presence: true
   validates :wage_lower_bound, numericality: { greater_than: 0}
+
   def publish!
     self.is_hidden = false
     self.save
@@ -20,4 +22,7 @@ class Job < ApplicationRecord
 
   has_many :favorites
   has_many :fans, through: :favorites, source: :user
+
+  acts_as_votable
+  
 end

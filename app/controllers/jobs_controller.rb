@@ -57,7 +57,7 @@ class JobsController < ApplicationController
    end
 
     def destroy
-       @job = Job.find(params)
+       @job = Job.find(params[:id])
        @job.destroy
        redirect_to jobs_path
     end
@@ -67,6 +67,12 @@ class JobsController < ApplicationController
         search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
         @jobs = search_result.recent.paginate(:page => params[:page], :per_page => 5)
       end
+    end
+
+    def upvote
+      @job = Job.find(params[:id])
+      @job.upvote_by current_user
+      redirect_to :back
     end
 
 protected

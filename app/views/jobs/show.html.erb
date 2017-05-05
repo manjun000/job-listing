@@ -12,7 +12,7 @@
       <p>职位描述：<%= simple_format(@job.description) %></p>
 
       <!-- <%#= render :partial => "favorites/favorites_item" %> -->
-      <% if current_user%>
+      <% if current_user%><!--收藏 start-->
           <% if current_user.favorites.where(job: @job).empty? %>
               <button class="like btn btn-default" type="button">
                  <span class="fa fa-heart"></span>
@@ -32,7 +32,14 @@
                   <%= link_to("收藏", favorites_path(job_id: @job), method: :post) %>
               </button>
               <p> 已有<%= @job.fans.count %>人收藏 </p>
-      <% end%>
+      <% end%><!--收藏 end-->
+
+      <%= link_to like_job_path(@job), method: :put do %>
+          <div class="pi-thumbs-up">
+            <i class="fa fa-thumbs-up fa-2x", style="color:#ff5722;"></i>
+            <%= @job.get_upvotes.size%>
+          </div>
+      <% end %>
 
   </div>
 </div>

@@ -13,10 +13,14 @@ Rails.application.routes.draw do
   end
 
   resources :jobs do
-    resources :resumes
+    member do
+      put "like", to: "jobs#upvote"
+    end
     collection do
         get :search
     end
+
+    resources :resumes
   end
 
   namespace :account do
