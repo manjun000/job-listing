@@ -19,5 +19,11 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :account do
+    resources :favorites, only: [:index]
+  end
+
+  resources :favorites, only: [:create, :destroy]
+
   root 'welcome#index'
 end

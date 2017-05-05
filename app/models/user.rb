@@ -8,4 +8,6 @@ class User < ApplicationRecord
     is_admin
   end
   has_many :resumes
+  has_many :favorites
+  has_many :favorite_jobs, through: :favorites, source: :job
 end

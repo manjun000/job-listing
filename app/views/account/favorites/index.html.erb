@@ -1,0 +1,20 @@
+<h2> 我收藏的工作 </h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>取消收藏</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @favorite_jobs.each do |j|%>
+      <tr>
+        <td>
+          <%=link_to job_path(j)%>
+          <%=j.title%>
+        </td>
+        <td><%=link_to("取消收藏", favorite_path(j), method: :delete)%></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
