@@ -39,8 +39,9 @@ gem 'will_paginate'
 gem 'ransack'
 gem 'seo_helper'
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'i18n'
-gem 'rails-i18n'
+
+#gem 'i18n' 这两个是多国语言的gem
+#gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
