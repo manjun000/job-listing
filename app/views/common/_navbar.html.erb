@@ -26,6 +26,16 @@
                </li>
            </ul>
 
+           <!--语言切换-->
+           <!-- <ul class="nav navbar-nav navbar-right">
+             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= t('语言切换') %><span class="caret"></span></a>
+                <ul class="dropdown-menu pull-right">
+                  <li><%= link_to "簡中版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %></li>
+                  <li><%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %></li>
+                </ul>
+             </li>
+           </ul> -->
+
             <!--账号操作-->
             <ul class="nav navbar-nav navbar-right">
               <% if !current_user %>
