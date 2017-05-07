@@ -8,6 +8,9 @@
 <%= f.input :wage_lower_bound, :lable => "薪资下限" %>
 <%= f.input :wage_upper_bound, :lable => "薪资上限" %>
 <%= f.input :contact_email %>
+<%= f.text_field :cp_lat, :id => "maplat", :type => "hidden" %>
+<%= f.text_field :cp_lng, :id => "maplng", :type => "hidden" %>
+<%= render "common/baidumap_1" %>
 <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
 <%= f.input :is_hidden %>
 

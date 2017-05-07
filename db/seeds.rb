@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Hello World!'
-puts '这个种子档会自动建立一个账号, 并且随机创建 30个公开的jobs，10个隐藏的jobs'
+puts '这个种子档会自动建立一个账号, 并且随机创建 11个公开的jobs，0个隐藏的jobs'
 
 create_account = User.create([email: 'admin@gmail.com', password: '111111', password_confirmation: '111111', is_admin: 'true'])
 puts 'Admin account is created successfully!'
@@ -26,14 +26,14 @@ job_info1 = [
   '游戏场景设计',
   '需求分析师'
 ]
-job_info2 = '广州, 上海, 苏州, 深圳'.split(',')
+# job_info2 = '广州, 上海, 苏州, 深圳'.split(',')
 job_info3 = '暴雪, 任天堂, uzi, Infinity Ward'.split(',')
-create_jobs = for i in 1..20 do
-                Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], contact_email:" text@gmail.com", description: "这是一个公开的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
+create_jobs = for i in 1..15 do
+                Job.create!([title: job_info1[rand(job_info1.length)],  company: job_info3[rand(job_info3.length)], contact_email:" text@gmail.com", description: "这是一个公开的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
               end
-              for i in 1..10 do
-                Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], contact_email:" text@gmail.com",  description: "这是一个隐藏的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
-              end
+              # for i in 1..10 do
+              #   Job.create!([title: job_info1[rand(job_info1.length)], city: job_info2[rand(job_info2.length)], company: job_info3[rand(job_info3.length)], contact_email:" text@gmail.com",  description: "这是一个隐藏的工作", wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
+              # end
 
 
 puts '20 Public jobs created.'

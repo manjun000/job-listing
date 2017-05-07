@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/modal
-//= require bootstrap/collapse 
+//= require bootstrap/collapse
 //= require_tree .
 
 /***鼠标移到tr上变色***/
